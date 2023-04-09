@@ -9,20 +9,12 @@ import KeyPressesPage from "../../page-objects/keyPressesPage";
 import StatusCodesPage from "../../page-objects/statusCodesPage";
 import IFramePage from "../../page-objects/iFramePage";
 
-describe("The first scenarios in page objece", () => {
+describe("Verify that all 12 functional tabs on the page work as intended", () => {
   beforeEach(() => {
     cy.visit("/");
   });
-  it("testing inputs", () => {
-    const homePage = new HomePage();
-    homePage.clickInputsTab();
 
-    const inputsPage = new InputsPage();
-    inputsPage.typeNumberIntoField();
-    inputsPage.typeLettersIntoField();
-  });
-
-  it("tests checkboxes", () => {
+  it("1 - checkboxes tests", () => {
     const homePage = new HomePage();
     homePage.clickCheckboxesTab();
 
@@ -31,15 +23,11 @@ describe("The first scenarios in page objece", () => {
     checkboxesPage.uncheckSecondCheckbox();
   });
 
-  it("tests dropdowns", () => {
-    const homePage = new HomePage();
-    homePage.clickDropdownListTab();
-
-    const dropdownListPage = new DropdownListPage();
-    dropdownListPage.chooseTheFirstOption();
+  it("2 - date picker tests", () => {
+    assert(false); // TODO Functionality
   });
 
-  it("tests hoovers", () => {
+  it("3 - hoovers tests", () => {
     const homePage = new HomePage();
     homePage.clickHooversTab();
 
@@ -47,7 +35,16 @@ describe("The first scenarios in page objece", () => {
     hooverPage.hooverOverElement();
   });
 
-  it("tests basic auth POSITIVE", () => {
+  it("4 - inputs tests", () => {
+    const homePage = new HomePage();
+    homePage.clickInputsTab();
+
+    const inputsPage = new InputsPage();
+    inputsPage.typeNumberIntoField();
+    inputsPage.typeLettersIntoField();
+  });
+
+  it("5 - basic auth POSITIVE tests", () => {
     const homePage = new HomePage();
     homePage.clickBasicAuthTab();
 
@@ -55,7 +52,7 @@ describe("The first scenarios in page objece", () => {
     basicAuthPage.provideValidCredentials();
   });
 
-  it("tests basic auth NEGATIVE", () => {
+  it("5 - basic auth NEGATIVE tests", () => {
     const homePage = new HomePage();
     homePage.clickBasicAuthTab();
 
@@ -63,7 +60,7 @@ describe("The first scenarios in page objece", () => {
     basicAuthPage.provideInvalidCredentials();
   });
 
-  it("tests form POSITIVE", () => {
+  it("6 - form POSITIVE tests", () => {
     const homePage = new HomePage();
     homePage.clickFormTab();
 
@@ -71,7 +68,7 @@ describe("The first scenarios in page objece", () => {
     formPage.submitFormProvidingAllMandatoryData();
   });
 
-  it("tests form NEGATIVE", () => {
+  it("6 - form NEGATIVE tests", () => {
     const homePage = new HomePage();
     homePage.clickFormTab();
 
@@ -79,7 +76,15 @@ describe("The first scenarios in page objece", () => {
     formPage.submitFormWithoutProvidingOneOfTheMandatoryFields();
   });
 
-  it("tests key presses", () => {
+  it("7 - dropdown list tests", () => {
+    const homePage = new HomePage();
+    homePage.clickDropdownListTab();
+
+    const dropdownListPage = new DropdownListPage();
+    dropdownListPage.chooseTheFirstOption();
+  });
+
+  it("8 - key presses tests", () => {
     const homePage = new HomePage();
     homePage.clickKeyPressesTab();
 
@@ -87,7 +92,15 @@ describe("The first scenarios in page objece", () => {
     keyPressesPage.pressStandardKey();
   });
 
-  it("tests status codes", () => {
+  it("9 - drag and drop tests", () => {
+    assert(false); // TODO Functionality
+  });
+
+  it("10 - add/remove elements tests", () => {
+    assert(false); // TODO Functionality
+  });
+
+  it("11 - status codes tests", () => {
     const homePage = new HomePage();
     homePage.clickStatusCodesTab();
 
@@ -98,7 +111,7 @@ describe("The first scenarios in page objece", () => {
     statusCodesPage.testStatusCode500();
   });
 
-  it("tests iframe", () => {
+  it("12 - iframe tests", () => {
     const homePage = new HomePage();
     homePage.clickIFrameTab();
 
