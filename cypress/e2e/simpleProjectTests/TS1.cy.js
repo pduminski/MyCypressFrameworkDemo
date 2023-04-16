@@ -51,7 +51,7 @@ describe("Verify that all 12 functional tabs on the page work as intended", () =
     inputsPage.typeLettersIntoField();
   });
 
-  it("5 - basic auth POSITIVE tests", () => {
+  it("5A - basic auth POSITIVE tests", () => {
     const homePage = new HomePage();
     homePage.clickBasicAuthTab();
 
@@ -59,7 +59,7 @@ describe("Verify that all 12 functional tabs on the page work as intended", () =
     basicAuthPage.provideValidCredentials();
   });
 
-  it("5 - basic auth NEGATIVE tests", () => {
+  it("5B - basic auth NEGATIVE tests", () => {
     const homePage = new HomePage();
     homePage.clickBasicAuthTab();
 
@@ -67,7 +67,7 @@ describe("Verify that all 12 functional tabs on the page work as intended", () =
     basicAuthPage.provideInvalidCredentials();
   });
 
-  it("6 - form POSITIVE tests", () => {
+  it("6A - form POSITIVE tests", () => {
     const homePage = new HomePage();
     homePage.clickFormTab();
 
@@ -75,7 +75,7 @@ describe("Verify that all 12 functional tabs on the page work as intended", () =
     formPage.submitFormProvidingAllMandatoryData();
   });
 
-  it("6 - form NEGATIVE tests", () => {
+  it("6B - form NEGATIVE tests", () => {
     const homePage = new HomePage();
     homePage.clickFormTab();
 
@@ -106,7 +106,7 @@ describe("Verify that all 12 functional tabs on the page work as intended", () =
     dragAndDropPage.dragAndDropElement();
   });
 
-  it("10 - add/remove elements - Add 1 element and remove it", () => {
+  it("10A - add/remove elements - Add 1 element and remove it", () => {
     const homePage = new HomePage();
     homePage.clickAddRemoveElementTab();
 
@@ -121,7 +121,7 @@ describe("Verify that all 12 functional tabs on the page work as intended", () =
     addRemoveElementPage.showDeleteButtonsQuantity();
   });
 
-  it("10 - add/remove elements - Add several elements and remove all", () => {
+  it("10B - add/remove elements - Add several elements and remove all", () => {
     const homePage = new HomePage();
     homePage.clickAddRemoveElementTab();
 
