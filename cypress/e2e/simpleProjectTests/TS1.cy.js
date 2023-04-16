@@ -8,6 +8,7 @@ import FormPage from "../../page-objects/formPage";
 import KeyPressesPage from "../../page-objects/keyPressesPage";
 import StatusCodesPage from "../../page-objects/statusCodesPage";
 import IFramePage from "../../page-objects/iFramePage";
+import DatePickerdPage from "../../page-objects/datePickerPage";
 
 describe("Verify that all 12 functional tabs on the page work as intended", () => {
   beforeEach(() => {
@@ -24,7 +25,11 @@ describe("Verify that all 12 functional tabs on the page work as intended", () =
   });
 
   it("2 - date picker tests", () => {
-    assert(false); // TODO Functionality
+    const homePage = new HomePage();
+    homePage.clickDatePickerTab();
+
+    const datePickerPage = new DatePickerdPage();
+    datePickerPage.clickDatePickerAndChooseDate();
   });
 
   it("3 - hoovers tests", () => {

@@ -11,6 +11,7 @@ const statusCodesHeader = "#statuscodes-header";
 const iFrameHeader = "#iframe-header";
 const dragAndDropHeader = "#draganddrop-header";
 const addRemoveElementsHeader = "#draganddrop-header";
+const datePickerHeader = "#datepicker-header";
 
 class HomePage {
   visitPage() {
@@ -60,6 +61,10 @@ class HomePage {
 
   clickAddRemoveElementTab() {
     cy.get(addRemoveElementsHeader).click();
+  }
+
+  clickDatePickerTab() {
+    cy.get(datePickerHeader).click();
   }
 }
 
