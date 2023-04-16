@@ -9,6 +9,7 @@ import KeyPressesPage from "../../page-objects/keyPressesPage";
 import StatusCodesPage from "../../page-objects/statusCodesPage";
 import IFramePage from "../../page-objects/iFramePage";
 import DatePickerdPage from "../../page-objects/datePickerPage";
+import AddRemoveElementsPage from "../../page-objects/addRemoveElementsPage";
 
 describe("Verify that all 12 functional tabs on the page work as intended", () => {
   beforeEach(() => {
@@ -101,8 +102,35 @@ describe("Verify that all 12 functional tabs on the page work as intended", () =
     assert(false); // TODO Functionality
   });
 
-  it("10 - add/remove elements tests", () => {
-    assert(false); // TODO Functionality
+  it("10 - add/remove elements - Add 1 element and remove it", () => {
+    const homePage = new HomePage();
+    homePage.clickAddRemoveElementTab();
+
+    const addRemoveElementPage = new AddRemoveElementsPage();
+    // Add element and verify buttons quantity
+    addRemoveElementPage.showDeleteButtonsQuantity();
+    addRemoveElementPage.clickAddElementButton(1);
+    addRemoveElementPage.showDeleteButtonsQuantity();
+
+    // Remove added element and verfiy buttons quantity
+    addRemoveElementPage.clickAllDeleteButtons();
+    addRemoveElementPage.showDeleteButtonsQuantity();
+  });
+
+  it("10 - add/remove elements - Add several elements and remove all", () => {
+    const homePage = new HomePage();
+    homePage.clickAddRemoveElementTab();
+
+    const addRemoveElementPage = new AddRemoveElementsPage();
+
+    // Add several elements and verify buttons quantity
+    addRemoveElementPage.showDeleteButtonsQuantity();
+    addRemoveElementPage.clickAddElementButton(3);
+
+    // Remove element by element until we have 0
+    addRemoveElementPage.showDeleteButtonsQuantity();
+    addRemoveElementPage.clickAllDeleteButtons();
+    addRemoveElementPage.showDeleteButtonsQuantity();
   });
 
   it("11 - status codes tests", () => {

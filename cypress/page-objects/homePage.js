@@ -10,7 +10,7 @@ const keyPressesHeader = "#keypresses-header";
 const statusCodesHeader = "#statuscodes-header";
 const iFrameHeader = "#iframe-header";
 const dragAndDropHeader = "#draganddrop-header";
-const addRemoveElementsHeader = "#draganddrop-header";
+const addRemoveElementsHeader = "#addremoveelements-header";
 const datePickerHeader = "#datepicker-header";
 
 class HomePage {
