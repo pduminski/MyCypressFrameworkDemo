@@ -10,6 +10,7 @@ import StatusCodesPage from "../../page-objects/statusCodesPage";
 import IFramePage from "../../page-objects/iFramePage";
 import DatePickerdPage from "../../page-objects/datePickerPage";
 import AddRemoveElementsPage from "../../page-objects/addRemoveElementsPage";
+import DragAndDropPage from "../../page-objects/dragAndDropPage";
 
 describe("Verify that all 12 functional tabs on the page work as intended", () => {
   beforeEach(() => {
@@ -99,7 +100,10 @@ describe("Verify that all 12 functional tabs on the page work as intended", () =
   });
 
   it("9 - drag and drop tests", () => {
-    assert(false); // TODO Functionality
+    const homePage = new HomePage();
+    homePage.clickDragAndDropTab();
+    const dragAndDropPage = new DragAndDropPage();
+    dragAndDropPage.dragAndDropElement();
   });
 
   it("10 - add/remove elements - Add 1 element and remove it", () => {
