@@ -1,7 +1,7 @@
 import HomePage from "../../page-objects/WebDriverUniversity/HomePage";
 import ContactUsPage from "../../page-objects/webDriverUniversity/contactUsPage";
 
-describe("Verify that user can send message wia Contact Us form", () => {
+describe("Verify that user can send message via Contact Us form", () => {
   beforeEach(() => {});
 
   it.only("Contact Us Happy Path", () => {
