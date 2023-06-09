@@ -8,6 +8,7 @@ const resetButton = "input[type='reset']";
 const firstName = "Bilbo";
 const lastName = "Baggins";
 const emailAddress = "testBilbo@test.com";
+const invalidEmailAddress = "testBilbotest";
 const message = "Buying here is a pleasure";
 
 class ContactUsPage {
@@ -23,6 +24,12 @@ class ContactUsPage {
     cy.get(emailAddressField)
       .type(emailAddress)
       .should("have.value", emailAddress);
+  }
+
+  provideInvalidEmailAddress() {
+    cy.get(emailAddressField)
+      .type(invalidEmailAddress)
+      .should("have.value", invalidEmailAddress);
   }
 
   provideMessage() {
@@ -43,6 +50,10 @@ class ContactUsPage {
 
   validationOfTheMissingField() {
     cy.get("body").should("include.text", "Error: all fields are required");
+  }
+
+  validationOfTheIncorrectEmailAddress() {
+    cy.get("body").should("include.text", "Error: Invalid email address");
   }
 }
 
