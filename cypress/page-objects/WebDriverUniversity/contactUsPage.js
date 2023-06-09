@@ -55,6 +55,10 @@ class ContactUsPage {
   validationOfTheIncorrectEmailAddress() {
     cy.get("body").should("include.text", "Error: Invalid email address");
   }
+
+  validationOfTheSuccessText() {
+    cy.get("h1").should("have.text", "Thank You for your Message!");
+  }
 }
 
 export default ContactUsPage;

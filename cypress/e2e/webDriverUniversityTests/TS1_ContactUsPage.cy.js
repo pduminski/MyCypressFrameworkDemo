@@ -19,10 +19,11 @@ describe("Verify that user can send message via Contact Us form", () => {
 
     contactUsPage.clickSubmitButton();
 
+    contactUsPage.validationOfTheSuccessText();
     contactUsPage.verifyUrlAddressAfterTest();
   });
 
-  it.only("Contact Us grumpy path missing mandatory field - First Name", () => {
+  it("Contact Us grumpy path missing mandatory field - First Name", () => {
     const homePage = new HomePage();
     homePage.visitPage();
     homePage.clickContactUs();
@@ -40,7 +41,7 @@ describe("Verify that user can send message via Contact Us form", () => {
     contactUsPage.validationOfTheMissingField();
   });
 
-  it.only("Contact Us grumpy path missing mandatory field - Last Name", () => {
+  it("Contact Us grumpy path missing mandatory field - Last Name", () => {
     const homePage = new HomePage();
     homePage.visitPage();
     homePage.clickContactUs();
@@ -58,7 +59,7 @@ describe("Verify that user can send message via Contact Us form", () => {
     contactUsPage.validationOfTheMissingField();
   });
 
-  it.only("Contact Us grumpy path missing mandatory field - Email Address", () => {
+  it("Contact Us grumpy path missing mandatory field - Email Address", () => {
     const homePage = new HomePage();
     homePage.visitPage();
     homePage.clickContactUs();
@@ -76,7 +77,7 @@ describe("Verify that user can send message via Contact Us form", () => {
     contactUsPage.validationOfTheMissingField();
   });
 
-  it.only("Contact Us grumpy path missing mandatory field - Message", () => {
+  it("Contact Us grumpy path missing mandatory field - Message", () => {
     const homePage = new HomePage();
     homePage.visitPage();
     homePage.clickContactUs();
@@ -94,7 +95,7 @@ describe("Verify that user can send message via Contact Us form", () => {
     contactUsPage.validationOfTheMissingField();
   });
 
-  it.only("Contact Us grumpy path incorrect value - Email Address", () => {
+  it("Contact Us grumpy path incorrect value - Email Address", () => {
     const homePage = new HomePage();
     homePage.visitPage();
     homePage.clickContactUs();
@@ -113,7 +114,7 @@ describe("Verify that user can send message via Contact Us form", () => {
     contactUsPage.validationOfTheIncorrectEmailAddress();
   });
 
-  it.only("Contact Us grumpy path incorrect value and missing value - Email Address incorrect, last name missing", () => {
+  it("Contact Us grumpy path incorrect value and missing value - Email Address incorrect, last name missing", () => {
     const homePage = new HomePage();
     homePage.visitPage();
     homePage.clickContactUs();
