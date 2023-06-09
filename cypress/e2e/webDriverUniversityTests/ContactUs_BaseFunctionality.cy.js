@@ -1,5 +1,5 @@
 import HomePage from "../../page-objects/WebDriverUniversity/HomePage";
-import ContactUsPage from "../../page-objects/WebDriverUniversity/contactUsPage";
+import ContactUsPage from "../../page-objects/webDriverUniversity/contactUsPage";
 
 describe("Verify that user can send message wia Contact Us form", () => {
   beforeEach(() => {});
