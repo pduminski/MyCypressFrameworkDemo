@@ -1,10 +1,10 @@
-import HomePage from "../../page-objects/WebDriverUniversity/HomePage";
-import ContactUsPage from "../../page-objects/webDriverUniversity/contactUsPage";
+import HomePage from "../../page-objects/4-webDriverUniversity/homePage";
+import ContactUsPage from "../../page-objects/4-webDriverUniversity/contactUsPage";
 
 describe("Verify that user can send message via Contact Us form", () => {
   beforeEach(() => {});
 
-  it.only("Contact Us Happy Path", () => {
+  it("Contact Us Happy Path", () => {
     const homePage = new HomePage();
     homePage.visitPage();
     homePage.clickContactUs();
@@ -131,5 +131,27 @@ describe("Verify that user can send message via Contact Us form", () => {
 
     contactUsPage.validationOfTheMissingField();
     contactUsPage.validationOfTheIncorrectEmailAddress();
+  });
+
+  it("Contact Us page validation using cy.document", () => {
+    const homePage = new HomePage();
+    homePage.visitPage();
+    homePage.clickContactUs();
+
+    const contactUsPage = new ContactUsPage();
+    contactUsPage.verifyUrlAddressBeforeTest();
+
+    cy.document().should("have.property", "charset").and("eq", "UTF-8");
+  });
+
+  it("Contact Us page validation using cy.title", () => {
+    const homePage = new HomePage();
+    homePage.visitPage();
+    homePage.clickContactUs();
+
+    const contactUsPage = new ContactUsPage();
+    contactUsPage.verifyUrlAddressBeforeTest();
+
+    cy.title().should("include", "WebDriver | Contact Us");
   });
 });
