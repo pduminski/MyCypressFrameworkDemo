@@ -1,16 +1,16 @@
-import HomePage from "../../page-objects/fabrykaTestow/homePage";
-import InputsPage from "../../page-objects/fabrykaTestow/inputsPage";
-import CheckboxesPage from "../../page-objects/fabrykaTestow/checkboxesPage";
-import DropdownListPage from "../../page-objects/fabrykaTestow/dropdownlistPage";
-import HooversPage from "../../page-objects/fabrykaTestow/hooversPage";
-import BasicAuthPage from "../../page-objects/fabrykaTestow/basicAuthPage";
-import FormPage from "../../page-objects/fabrykaTestow/formPage";
-import KeyPressesPage from "../../page-objects/fabrykaTestow/keyPressesPage";
-import StatusCodesPage from "../../page-objects/fabrykaTestow/statusCodesPage";
-import IFramePage from "../../page-objects/fabrykaTestow/iFramePage";
-import DatePickerdPage from "../../page-objects/fabrykaTestow/datePickerPage";
-import AddRemoveElementsPage from "../../page-objects/fabrykaTestow/addRemoveElementsPage";
-import DragAndDropPage from "../../page-objects/fabrykaTestow/dragAndDropPage";
+import HomePage from "../../page-objects/3-fabrykaTestow/homePage";
+import InputsPage from "../../page-objects/3-fabrykaTestow/inputsPage";
+import CheckboxesPage from "../../page-objects/3-fabrykaTestow/checkboxesPage";
+import DropdownListPage from "../../page-objects/3-fabrykaTestow/dropdownlistPage";
+import HooversPage from "../../page-objects/3-fabrykaTestow/hooversPage";
+import BasicAuthPage from "../../page-objects/3-fabrykaTestow/basicAuthPage";
+import FormPage from "../../page-objects/3-fabrykaTestow/formPage";
+import KeyPressesPage from "../../page-objects/3-fabrykaTestow/keyPressesPage";
+import StatusCodesPage from "../../page-objects/3-fabrykaTestow/statusCodesPage";
+import IFramePage from "../../page-objects/3-fabrykaTestow/iFramePage";
+import DatePickerdPage from "../../page-objects/3-fabrykaTestow/datePickerPage";
+import AddRemoveElementsPage from "../../page-objects/3-fabrykaTestow/addRemoveElementsPage";
+import DragAndDropPage from "../../page-objects/3-fabrykaTestow/dragAndDropPage";
 
 describe("Verify that all 12 functional tabs on the page work as intended", () => {
   beforeEach(() => {

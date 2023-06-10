@@ -8,6 +8,11 @@ class Urls {
     const url = "http://www.webdriveruniversity.com";
     cy.visit(url);
   }
+
+  visitWAutomationteststore() {
+    const url = "https://www.automationteststore.com/";
+    cy.visit(url);
+  }
 }
 
 export default Urls;
