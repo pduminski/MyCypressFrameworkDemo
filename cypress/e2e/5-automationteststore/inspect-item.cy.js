@@ -41,7 +41,7 @@ describe("Inspect Automation Test Store items using cain of commands", () => {
       )
       .click()
       .then((linkName) => {
-        console.log("Found Text:" + linkName.text());
+        cy.log("Found Text:" + linkName.text());
       });
   });
 
@@ -52,7 +52,7 @@ describe("Inspect Automation Test Store items using cain of commands", () => {
     cy.get("a[href$='contact']")
       .click()
       .then((linkName) => {
-        console.log("Found Text:" + linkName.text());
+        cy.log("Found Text:" + linkName.text());
       });
   });
 });
