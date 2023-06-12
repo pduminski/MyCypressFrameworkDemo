@@ -24,7 +24,7 @@ describe("Verifying variables, cyprss commands and jquery commands", () => {
     });
   });
 
-  it.only("Validating properties of the Contact Us Page", () => {
+  it("Validating properties of the Contact Us Page", () => {
     const homePage = new HomePage();
     homePage.visitPage();
 
