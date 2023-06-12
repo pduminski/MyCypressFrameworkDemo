@@ -21,8 +21,6 @@ describe("Iterate over elements", () => {
     cy.get("a[href*='product/category&path=']").contains("Hair Care").click();
 
     cy.get(".fixed_wrapper .prdocutname").each(($el, index, $list) => {
-      // cy.log("Index: ", index + " : " + $el.text());
-
       if ($el.text().includes("Eau Parfumee au The Vert Shampoo")) {
         cy.wrap($el).click();
       }
