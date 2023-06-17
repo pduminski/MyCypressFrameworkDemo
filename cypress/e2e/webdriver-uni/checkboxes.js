@@ -2,7 +2,9 @@
 
 describe("Verify checkboxes via webdriveruni", () => {
   beforeEach(() => {
-    cy.visit("http://www.webdriveruniversity.com");
+    cy.visit(
+      Cypress.env("webdriveruni_homepage") + "/Contact-Us/contactus.html"
+    );
     cy.get("#dropdown-checkboxes-radiobuttons")
       .invoke("removeAttr", "target")
       .click({ force: true });
