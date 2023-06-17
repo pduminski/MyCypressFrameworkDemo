@@ -21,6 +21,5 @@ describe("Cypress web security", () => {
     });
 
     cy.visit("https://www.webdriveruniversity.com");
-    cy.visit("https://www.selectors.webdriveruniversity.com");
   });
 });
