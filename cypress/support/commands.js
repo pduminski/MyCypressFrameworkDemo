@@ -48,5 +48,9 @@ Cypress.Commands.add("addProductToBasket", (productName) => {
   });
 });
 
+Cypress.Commands.add("navigateTo_WebdriverUni_Homepage", () => {
+  cy.visit(Cypress.env("webdriveruni_homepage") + "/");
+});
+
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
