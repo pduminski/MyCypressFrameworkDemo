@@ -18,8 +18,8 @@ module.exports = defineConfig({
     pageLoadTimeout: 30000,
     screenshotOnRunFailure: true,
     trashAssetsBeforeRuns: true,
-    video: true,
-    videoUploadOnPasses: true,
+    video: false,
+    videoUploadOnPasses: false,
     env: {
       first_name: "Sarah",
       webdriveruni_homepage: "http://www.webdriveruniversity.com",
