@@ -4,7 +4,11 @@
   "description": "Cypress Framework created from scratch ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "triggerAllTests-headless": "npx cypress run",
+    "triggerAllTests-headed": "npx cypress run --headed",
+    "triggerAllTests-chrome": "npx cypress run --browser chrome",
+    "triggerAllTests-dashboard": "npx cypress run --record --key 503dc14b-98d7-4fe0-82e9-4aaf1768c4b8",
+    "triggerAllTests-webdriveruni": "npx cypress run --spec cypress/e2e/webdriver-uni/*"
   },
   "repository": {
     "type": "git",

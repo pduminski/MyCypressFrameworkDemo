@@ -12,6 +12,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
+    excludeSpecPattern: "cypress/e2e/other/**/*",
     testIsolation: false,
     chromeWebSecurity: false,
     defaultCommandTimeout: 10000,
