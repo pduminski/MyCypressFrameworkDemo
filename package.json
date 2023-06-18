@@ -8,7 +8,9 @@
     "triggerAllTests-headed": "npx cypress run --headed",
     "triggerAllTests-chrome": "npx cypress run --browser chrome",
     "triggerAllTests-dashboard": "npx cypress run --record --key 503dc14b-98d7-4fe0-82e9-4aaf1768c4b8",
-    "triggerAllTests-webdriveruni": "npx cypress run --spec cypress/e2e/webdriver-uni/*"
+    "triggerAllTests-webdriveruni": "npx cypress run --spec cypress/e2e/webdriver-uni",
+    "triggerAllTests-simpletestsite": "npx cypress run --spec cypress/e2e/simpletestsite",
+    "triggerAllTests-webdriveruni-checkboxes": "npx cypress run --spec cypress/e2e/webdriver-uni/checkboxes.js"
   },
   "repository": {
     "type": "git",
