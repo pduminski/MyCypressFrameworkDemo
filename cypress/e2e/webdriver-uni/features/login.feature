@@ -1,3 +1,4 @@
+@regression
 Feature: webdriver-uni Login Page
 
     Scenario: Login using valid credentials
@@ -13,7 +14,6 @@ Feature: webdriver-uni Login Page
         And I enter a password webdriver555
         And I click the login button
         Then I should be presented with the following message validation failed
-
 
     Scenario Outline: Test Login via webdriver-uni Login Portal
         Given I access WebdriverUniversity Login Portal page
