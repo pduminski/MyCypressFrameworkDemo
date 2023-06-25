@@ -5,7 +5,10 @@ module.exports = defineConfig({
   viewportHeight: 800,
   viewportWidth: 1200,
   projectId: "zjqccf",
-
+  reporter: "cypress-multi-reporters",
+  reporterOptions: {
+    configFile: "reporter-config.json",
+  },
   e2e: {
     baseUrl: "http://simpletestsite.fabrykatestow.pl/",
     // baseUrl: "http://www.webdriveruniversity.com",

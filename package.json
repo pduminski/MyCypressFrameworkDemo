@@ -11,7 +11,10 @@
     "triggerAllTests-webdriveruni": "npx cypress run --spec cypress/e2e/webdriver-uni",
     "triggerAllTests-simpletestsite": "npx cypress run --spec cypress/e2e/simpletestsite",
     "triggerAllTests-webdriveruni-checkboxes": "npx cypress run --spec cypress/e2e/webdriver-uni/checkboxes.js",
-    "triggerAllTests-cucumberTests": "npx cypress run --spec cypress/e2e/webdriver-uni/features/*.feature --browser chrome"
+    "triggerAllTests-cucumberTests": "npx cypress run --spec cypress/e2e/webdriver-uni/features/*.feature --browser chrome",
+    "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
+    "delete-junit-report": "rm -rf cypress/results/junit/results.xml",
+    "delete-results": "rm -rf cypress/results/* || true"
   },
   "repository": {
     "type": "git",
@@ -27,7 +30,9 @@
     "@4tw/cypress-drag-drop": "^2.2.3",
     "@faker-js/faker": "7.6.0",
     "cypress": "^12.14.0",
-    "cypress-cucumber-preprocessor": "^4.3.1"
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-multi-reporters": "^1.6.3",
+    "mocha-junit-reporter": "^2.2.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
